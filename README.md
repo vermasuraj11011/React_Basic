@@ -1,71 +1,112 @@
-# Getting Started with Create React App
+# Simple React JS Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## What is the use of this Repo
 
-## Available Scripts
+This Project is a Simple ReactJS Project which demonstrates the following
+1. Creating a Component in React
+2. Making HTTP calls to BE running on different port.
+3. Communicating between parent and child component
+4. Using Bootstrap along with React
+5. Using Basic Routing in React
 
-In the project directory, you can run:
+## Prerequisites
 
-### `npm start`
+### Download and follow instruction form below repo for BE support
+Refer to https://github.com/vermasuraj11011/Backend_for_react_app
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Complete the above step first ,
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Install Node JS
+Refer to https://nodejs.org/en/ to install nodejs
 
-### `npm test`
+### Install create-react-app
+Install create-react-app npm package globally. This will help to easily run the project and also build the source files easily. Use the following command to install create-react-app
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+npm install -g create-react-app
+```
 
-### `npm run build`
+## Cloning and Running the Application in local
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Clone the project into local
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Install all the npm packages. Go into the project folder and type the following command to install all npm packages
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+npm install
+```
 
-### `npm run eject`
+In order to run the application Type the following command
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+npm start
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The Application Runs on **localhost:3000**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Application design
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+#### Components
 
-## Learn More
+1. **Home** Component: It is the landing page of the application.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+2. **Header** Component: It is a header component which is visible throughout the application.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+3. **Menu** Component: It is like a side navbar which route user to different page. 
 
-### Code Splitting
+4. **AllCourse** Component: It is used to display the list of all component.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+5. **Course** Component : This Component displays a single course detail.
 
-### Analyzing the Bundle Size
+6. **AddCourse** Component : This Component is used to add the new course.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+7. **UpdateCourse** Component: This Component is used to update the already existing course.
 
-### Making a Progressive Web App
+#### Feature
+1. User can add the course.
+2. User can view the list of all courses.
+3. User can update the course detail.
+4. User can delete the course from view page.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+#### HTTP client
 
-### Advanced Configuration
+**axios** library is used to make HTTP Calls to BE running on 8080
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+#### URL
 
-### Deployment
+base url <br>
+http://localhost:3000
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+**Home Page**:  /
 
-### `npm run build` fails to minify
+**View All Course**:  /view-course
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# React_Basic
+**Add Course**:  /add-course
+
+**Update Course**: /update-course/{courseId}
+
+
+## Views
+
+**Home Page**
+![App Screenshot](./public/home.png)
+
+
+**View All Course page**
+ ![App Screenshot](./public/view_course.png)
+
+ **Add Course page**
+ ![App Screenshot](./public/add_course.png)
+
+ **Update Course page**
+ ![App Screenshot](./public/update_course.png)
+
+
+## Resources
+
+**create-react-app** : The following link has all the commands that can be used with create-react-app
+https://github.com/facebook/create-react-app
+
+**ReactJS** : Refer to https://reactjs.org/ to understand the concepts of ReactJS
+
+**React Bootstrap** : Refer to https://react-bootstrap.github.io/getting-started/introduction/ to understand how to use React Bootstrap
